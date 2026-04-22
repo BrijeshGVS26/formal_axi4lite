@@ -1,0 +1,21 @@
+[tasks]
+bmc
+cvr
+
+[options]
+bmc: mode bmc
+bmc: depth 20
+cvr: mode cover
+cvr: depth 20
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal -sv axi4lite_slave.sv
+read -formal -sv axi4lite_fv_top.sv
+prep -top axi4lite_fv_top
+
+[files]
+rtl/axi4lite_slave.sv
+fv/axi4lite_fv_top.sv

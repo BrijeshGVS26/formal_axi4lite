@@ -1,0 +1,9 @@
+# running in fv/prove_buggy_bmc/src/
+read -formal -sv axi4lite_slave_buggy.sv
+read -formal -sv axi4lite_fv_top.sv
+prep -top axi4lite_fv_top
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

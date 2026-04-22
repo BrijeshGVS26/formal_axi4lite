@@ -1,0 +1,40 @@
+SBY 13:58:27 [fv/prove_buggy_bmc] Removing directory '/Users/brijeshguttivenkatasai/Desktop/projects/formal_axi4lite/fv/prove_buggy_bmc'.
+SBY 13:58:27 [fv/prove_buggy_bmc] Copy '/Users/brijeshguttivenkatasai/Desktop/projects/formal_axi4lite/rtl/axi4lite_slave_buggy.sv' to '/Users/brijeshguttivenkatasai/Desktop/projects/formal_axi4lite/fv/prove_buggy_bmc/src/axi4lite_slave_buggy.sv'.
+SBY 13:58:27 [fv/prove_buggy_bmc] Copy '/Users/brijeshguttivenkatasai/Desktop/projects/formal_axi4lite/fv/axi4lite_fv_top.sv' to '/Users/brijeshguttivenkatasai/Desktop/projects/formal_axi4lite/fv/prove_buggy_bmc/src/axi4lite_fv_top.sv'.
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: smtbmc z3
+SBY 13:58:27 [fv/prove_buggy_bmc] base: starting process "cd fv/prove_buggy_bmc/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 13:58:27 [fv/prove_buggy_bmc] base: finished (returncode=0)
+SBY 13:58:27 [fv/prove_buggy_bmc] prep: starting process "cd fv/prove_buggy_bmc/model; yosys -ql design_prep.log design_prep.ys"
+SBY 13:58:27 [fv/prove_buggy_bmc] prep: finished (returncode=0)
+SBY 13:58:27 [fv/prove_buggy_bmc] smt2: starting process "cd fv/prove_buggy_bmc/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 13:58:27 [fv/prove_buggy_bmc] smt2: finished (returncode=0)
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: starting process "cd fv/prove_buggy_bmc; yosys-smtbmc -s z3 --presat --noprogress -t 12  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Solver: z3
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  BMC failed!
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Value for anyconst axi4lite_fv_top.f_watch_idx (axi4lite_fv_top.sv:26.41-26.52): 0
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Assert failed in axi4lite_fv_top: a01
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace.vcd
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace.smtc
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Status: failed
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: finished (returncode=1)
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: Status returned by engine: FAIL
+SBY 13:58:27 [fv/prove_buggy_bmc] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 13:58:27 [fv/prove_buggy_bmc] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 13:58:27 [fv/prove_buggy_bmc] summary: engine_0 (smtbmc z3) returned FAIL
+SBY 13:58:27 [fv/prove_buggy_bmc] summary: counterexample trace: fv/prove_buggy_bmc/engine_0/trace.vcd
+SBY 13:58:27 [fv/prove_buggy_bmc] summary:   failed assertion axi4lite_fv_top.a01 at axi4lite_fv_top.sv:76.13-76.33 step 5
+SBY 13:58:27 [fv/prove_buggy_bmc] DONE (FAIL, rc=2)

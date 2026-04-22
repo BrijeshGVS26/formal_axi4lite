@@ -1,0 +1,86 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.64 (git sha1 d8dab5b32666564eca8e18f412973853ce006e61, clang++ 21.0.0 -fPIC -O3)
+
+-- Executing script file `design_prep.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave.
+Found 0 SCCs in module axi4lite_fv_top.
+Found 0 SCCs.
+
+3. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+4. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+5. Executing ASYNC2SYNC pass.
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave..
+Finding unused cells or wires in module \axi4lite_fv_top..
+Removed 102 unused cells and 102 unused wires.
+<suppressed ~103 debug messages>
+
+7. Executing FORMALFF pass.
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave..
+Finding unused cells or wires in module \axi4lite_fv_top..
+Removed 11 unused cells and 11 unused wires.
+<suppressed ~13 debug messages>
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave...
+Checking module axi4lite_fv_top...
+Found and reported 0 problems.
+
+10. Executing SETUNDEF pass (replace undef values with defined constants).
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave.
+Optimizing module axi4lite_fv_top.
+<suppressed ~1 debug messages>
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave'.
+Computing hashes of 76 cells of `$paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave'.
+Finding duplicate cells in `$paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave'.
+Finding identical cells in module `\axi4lite_fv_top'.
+Computing hashes of 216 cells of `\axi4lite_fv_top'.
+Finding duplicate cells in `\axi4lite_fv_top'.
+Computing hashes of 211 cells of `\axi4lite_fv_top'.
+Finding duplicate cells in `\axi4lite_fv_top'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+11.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave..
+Finding unused cells or wires in module \axi4lite_fv_top..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+11.5. Finished fast OPT passes.
+
+12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave..
+Finding unused cells or wires in module \axi4lite_fv_top..
+Removed 0 unused cells and 37 unused wires.
+<suppressed ~2 debug messages>
+
+13. Executing RTLIL backend.
+Output filename: ../model/design_prep.il
+
+End of script. Logfile hash: 68612d50ed, time: 0.02s, user: 0.03s, system: 0.00s, MEM: 15.92 MB peak
+Yosys 0.64 (git sha1 d8dab5b32666564eca8e18f412973853ce006e61, clang++ 21.0.0 -fPIC -O3)
+Time spent: 38% 4x opt_clean (0 sec), 8% 1x formalff (0 sec), ...

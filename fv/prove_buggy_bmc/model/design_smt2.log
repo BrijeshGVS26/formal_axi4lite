@@ -1,0 +1,134 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.64 (git sha1 d8dab5b32666564eca8e18f412973853ce006e61, clang++ 21.0.0 -fPIC -O3)
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `axi4lite_fv_top'. Setting top module to axi4lite_fv_top.
+
+2.1. Analyzing design hierarchy..
+Top module:  \axi4lite_fv_top
+Used module:     $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave
+
+2.2. Analyzing design hierarchy..
+Top module:  \axi4lite_fv_top
+Used module:     $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave
+Removed 0 unused modules.
+Module axi4lite_fv_top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+5. Printing statistics.
+
+=== $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       95 wires
+      708 wire bits
+       36 public wires
+      294 public wire bits
+       25 ports
+      143 port bits
+       78 cells
+        6   $anyseq
+        1   $assume
+        3   $eq
+       12   $ff
+        2   $logic_and
+        2   $logic_not
+        1   $mem_v2
+       42   $mux
+        1   $not
+        7   $pmux
+        1   $reduce_or
+
+=== axi4lite_fv_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      212 wires
+      561 wire bits
+       82 public wires
+      307 public wire bits
+       11 ports
+       53 port bits
+      212 cells
+        1   $anyconst
+       31   $anyinit
+       16   $assert
+       13   $assume
+       14   $eq
+       33   $ff
+        1   $initstate
+       43   $logic_and
+       18   $logic_not
+        6   $logic_or
+       30   $mux
+        1   $ne
+        1   $not
+        4   $reduce_bool
+        1 submodules
+        1   $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+      290 axi4lite_fv_top
+       78 $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave
+
+        +----------Count including submodules.
+        | 
+      307 wires
+     1269 wire bits
+      118 public wires
+      601 public wire bits
+       36 ports
+      196 port bits
+        - memories
+        - memory bits
+        - processes
+      290 cells
+        1   $anyconst
+       31   $anyinit
+        6   $anyseq
+       16   $assert
+       14   $assume
+       17   $eq
+       45   $ff
+        1   $initstate
+       45   $logic_and
+       20   $logic_not
+        6   $logic_or
+        1   $mem_v2
+       72   $mux
+        1   $ne
+        2   $not
+        7   $pmux
+        4   $reduce_bool
+        1   $reduce_or
+        1 submodules
+        1   $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave
+
+6. Executing SMT2 backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module $paramod$69437980e42767c350af827a9fef437148ade08c\axi4lite_slave.
+Creating SMT-LIBv2 representation of module axi4lite_fv_top.
+
+End of script. Logfile hash: 770f56d280, time: 0.01s, user: 0.01s, system: 0.00s, MEM: 14.12 MB peak
+Yosys 0.64 (git sha1 d8dab5b32666564eca8e18f412973853ce006e61, clang++ 21.0.0 -fPIC -O3)
+Time spent: 69% 2x write_smt2 (0 sec), 17% 2x read_rtlil (0 sec), ...

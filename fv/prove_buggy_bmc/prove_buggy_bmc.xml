@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-04-21T13:58:27" hostname="wlan-172-20-13-240.csuohio.edu" package="prove_buggy" id="0" name="bmc" tests="19" errors="0" failures="2" time="0" skipped="18">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="FAIL"/>
+</properties>
+<testcase classname="bmc" name="build execution" time="0">
+<failure type="FAIL" message="Task returned status FAIL." />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:76.13-76.33" time="0" type="ASSERT" location="axi4lite_fv_top.sv:76.13-76.33" id="a01" tracefile="engine_0/trace.vcd">
+<failure type="ASSERT" message="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:76.13-76.33 failed. Trace file: engine_0/trace.vcd" />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:80.13-80.33" time="0" type="ASSERT" location="axi4lite_fv_top.sv:80.13-80.33" id="a02">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:83.39-83.60" time="0" type="ASSERT" location="axi4lite_fv_top.sv:83.39-83.60" id="a03">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:86.39-86.60" time="0" type="ASSERT" location="axi4lite_fv_top.sv:86.39-86.60" id="a04">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:90.13-90.45" time="0" type="ASSERT" location="axi4lite_fv_top.sv:90.13-90.45" id="a05">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:93.32-93.78" time="0" type="ASSERT" location="axi4lite_fv_top.sv:93.32-93.78" id="a06">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:96.32-96.78" time="0" type="ASSERT" location="axi4lite_fv_top.sv:96.32-96.78" id="a07">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:100.13-100.34" time="0" type="ASSERT" location="axi4lite_fv_top.sv:100.13-100.34" id="a08">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:104.13-104.34" time="0" type="ASSERT" location="axi4lite_fv_top.sv:104.13-104.34" id="a09">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:109.13-109.35" time="0" type="ASSERT" location="axi4lite_fv_top.sv:109.13-109.35" id="a10">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:114.13-114.35" time="0" type="ASSERT" location="axi4lite_fv_top.sv:114.13-114.35" id="a11">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:121.41-121.84" time="0" type="ASSERT" location="axi4lite_fv_top.sv:121.41-121.84" id="a12">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:128.13-128.33" time="0" type="ASSERT" location="axi4lite_fv_top.sv:128.13-128.33" id="a13">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:171.13-171.47" time="0" type="ASSERT" location="axi4lite_fv_top.sv:171.13-171.47" id="a14">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:166.13-166.62" time="0" type="ASSERT" location="axi4lite_fv_top.sv:166.13-166.62" id="a14_inv">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in axi4lite_fv_top at axi4lite_fv_top.sv:174.22-176.58" time="0" type="ASSERT" location="axi4lite_fv_top.sv:174.22-176.58" id="a15">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property COVER in axi4lite_fv_top at axi4lite_fv_top.sv:182.13-182.83" time="0" type="COVER" location="axi4lite_fv_top.sv:182.13-182.83" id="c_both_idle">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property COVER in axi4lite_fv_top at axi4lite_fv_top.sv:181.13-181.56" time="0" type="COVER" location="axi4lite_fv_top.sv:181.13-181.56" id="c_read_completes">
+<skipped />
+</testcase>
+<testcase classname="bmc" name="Property COVER in axi4lite_fv_top at axi4lite_fv_top.sv:180.13-180.56" time="0" type="COVER" location="axi4lite_fv_top.sv:180.13-180.56" id="c_write_completes">
+<skipped />
+</testcase>
+<system-out>SBY 13:58:27 [fv/prove_buggy_bmc] Removing directory '/Users/brijeshguttivenkatasai/Desktop/projects/formal_axi4lite/fv/prove_buggy_bmc'.
+SBY 13:58:27 [fv/prove_buggy_bmc] Copy '/Users/brijeshguttivenkatasai/Desktop/projects/formal_axi4lite/rtl/axi4lite_slave_buggy.sv' to '/Users/brijeshguttivenkatasai/Desktop/projects/formal_axi4lite/fv/prove_buggy_bmc/src/axi4lite_slave_buggy.sv'.
+SBY 13:58:27 [fv/prove_buggy_bmc] Copy '/Users/brijeshguttivenkatasai/Desktop/projects/formal_axi4lite/fv/axi4lite_fv_top.sv' to '/Users/brijeshguttivenkatasai/Desktop/projects/formal_axi4lite/fv/prove_buggy_bmc/src/axi4lite_fv_top.sv'.
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: smtbmc z3
+SBY 13:58:27 [fv/prove_buggy_bmc] base: starting process &quot;cd fv/prove_buggy_bmc/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 13:58:27 [fv/prove_buggy_bmc] base: finished (returncode=0)
+SBY 13:58:27 [fv/prove_buggy_bmc] prep: starting process &quot;cd fv/prove_buggy_bmc/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 13:58:27 [fv/prove_buggy_bmc] prep: finished (returncode=0)
+SBY 13:58:27 [fv/prove_buggy_bmc] smt2: starting process &quot;cd fv/prove_buggy_bmc/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 13:58:27 [fv/prove_buggy_bmc] smt2: finished (returncode=0)
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: starting process &quot;cd fv/prove_buggy_bmc; yosys-smtbmc -s z3 --presat --noprogress -t 12  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Solver: z3
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  BMC failed!
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Value for anyconst axi4lite_fv_top.f_watch_idx (axi4lite_fv_top.sv:26.41-26.52): 0
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Assert failed in axi4lite_fv_top: a01
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace.vcd
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace.smtc
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: ##   0:00:00  Status: failed
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: finished (returncode=1)
+SBY 13:58:27 [fv/prove_buggy_bmc] engine_0: Status returned by engine: FAIL
+SBY 13:58:27 [fv/prove_buggy_bmc] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 13:58:27 [fv/prove_buggy_bmc] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 13:58:27 [fv/prove_buggy_bmc] summary: engine_0 (smtbmc z3) returned FAIL
+SBY 13:58:27 [fv/prove_buggy_bmc] summary: counterexample trace: fv/prove_buggy_bmc/engine_0/trace.vcd
+SBY 13:58:27 [fv/prove_buggy_bmc] summary:   failed assertion axi4lite_fv_top.a01 at axi4lite_fv_top.sv:76.13-76.33 step 5
+SBY 13:58:27 [fv/prove_buggy_bmc] DONE (FAIL, rc=2)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

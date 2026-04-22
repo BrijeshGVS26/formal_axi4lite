@@ -1,0 +1,3616 @@
+{
+  "$schema": "https://raw.githubusercontent.com/YosysHQ/yosys/main/misc/jny.schema.json",
+  "generator": "Yosys 0.64 (git sha1 d8dab5b32666564eca8e18f412973853ce006e61, clang++ 21.0.0 -fPIC -O3)",
+  "version": "0.0.1",
+  "invocation": "write_jny -no-connections ../model/design.json ",
+  "features": ["attributes", "properties"],
+  "modules": [
+      {
+        "name": "$paramod$69437980e42767c350af827a9fef437148ade08c\\axi4lite_slave",
+        "cell_sorts": [
+          {
+            "type": "$mem_v2",
+            "ports": [
+                {
+                  "name": "RD_ADDR",
+                  "direction": "io",
+                  "range": [6, 0]
+                },
+                {
+                  "name": "RD_ARST",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "RD_CLK",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "RD_DATA",
+                  "direction": "",
+                  "range": [64, 0]
+                },
+                {
+                  "name": "RD_EN",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "RD_SRST",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "WR_ADDR",
+                  "direction": "io",
+                  "range": [3, 0]
+                },
+                {
+                  "name": "WR_CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "WR_DATA",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "WR_EN",
+                  "direction": "io",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "mem",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:55.26-55.29"
+                  },
+                  "parameters": {
+                    "ABITS": "00000000000000000000000000000011",
+                    "INIT": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                    "MEMID": "\\mem",
+                    "OFFSET": "00000000000000000000000000000000",
+                    "RD_ARST_VALUE": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                    "RD_CE_OVER_SRST": "00",
+                    "RD_CLK_ENABLE": "00",
+                    "RD_CLK_POLARITY": "00",
+                    "RD_COLLISION_X_MASK": "00",
+                    "RD_INIT_VALUE": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                    "RD_PORTS": "00000000000000000000000000000010",
+                    "RD_SRST_VALUE": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                    "RD_TRANSPARENCY_MASK": "00",
+                    "RD_WIDE_CONTINUATION": "00",
+                    "SIZE": "00000000000000000000000000001000",
+                    "WIDTH": "00000000000000000000000000100000",
+                    "WR_CLK_ENABLE": "1",
+                    "WR_CLK_POLARITY": "1",
+                    "WR_PORTS": "00000000000000000000000000000001",
+                    "WR_PRIORITY_MASK": "0",
+                    "WR_WIDE_CONTINUATION": "0"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$339_CMP0",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:120.20-120.20|axi4lite_slave_buggy.sv:110.13-133.20"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$444_CMP0",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:90.20-90.20|axi4lite_slave_buggy.sv:68.13-97.20"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$470_CMP0",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:80.20-80.20|axi4lite_slave_buggy.sv:68.13-97.20"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$reduce_or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$auto$opt_reduce.cc:131:opt_pmux$625",
+                  "attributes": {
+
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [5, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$285",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:113.25-113.32|axi4lite_slave_buggy.sv:113.21-119.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$287",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:110.27-110.27|axi4lite_slave_buggy.sv:110.13-133.20"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$290",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:102.13-102.21|axi4lite_slave_buggy.sv:102.9-134.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$293",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:127.34-127.50|axi4lite_slave_buggy.sv:127.30-130.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$296",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:123.25-123.32|axi4lite_slave_buggy.sv:123.21-130.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$301",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:113.25-113.32|axi4lite_slave_buggy.sv:113.21-119.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$305",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:102.13-102.21|axi4lite_slave_buggy.sv:102.9-134.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$309",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:123.25-123.32|axi4lite_slave_buggy.sv:123.21-130.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$311",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:120.20-120.20|axi4lite_slave_buggy.sv:110.13-133.20"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$314",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:102.13-102.21|axi4lite_slave_buggy.sv:102.9-134.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$318",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:123.25-123.32|axi4lite_slave_buggy.sv:123.21-130.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$320",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:120.20-120.20|axi4lite_slave_buggy.sv:110.13-133.20"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$323",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:102.13-102.21|axi4lite_slave_buggy.sv:102.9-134.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$326",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:127.34-127.50|axi4lite_slave_buggy.sv:127.30-130.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$329",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:123.25-123.32|axi4lite_slave_buggy.sv:123.21-130.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$335",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:102.13-102.21|axi4lite_slave_buggy.sv:102.9-134.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$341",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:113.25-113.32|axi4lite_slave_buggy.sv:113.21-119.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$345",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:102.13-102.21|axi4lite_slave_buggy.sv:102.9-134.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$350",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:83.25-83.41|axi4lite_slave_buggy.sv:83.21-89.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$360",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:83.25-83.41|axi4lite_slave_buggy.sv:83.21-89.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$370",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:83.25-83.41|axi4lite_slave_buggy.sv:83.21-89.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000011"
+                  }
+                },
+                {
+                  "name": "$procmux$379",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:80.20-80.20|axi4lite_slave_buggy.sv:68.13-97.20"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$386",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:80.20-80.20|axi4lite_slave_buggy.sv:68.13-97.20"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$393",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:80.20-80.20|axi4lite_slave_buggy.sv:68.13-97.20"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000011"
+                  }
+                },
+                {
+                  "name": "$procmux$399",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:60.13-60.21|axi4lite_slave_buggy.sv:60.9-98.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$402",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:60.13-60.21|axi4lite_slave_buggy.sv:60.9-98.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$405",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:60.13-60.21|axi4lite_slave_buggy.sv:60.9-98.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000011"
+                  }
+                },
+                {
+                  "name": "$procmux$411",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:71.25-71.32|axi4lite_slave_buggy.sv:71.21-79.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$413",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:68.27-68.27|axi4lite_slave_buggy.sv:68.13-97.20"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$416",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:60.13-60.21|axi4lite_slave_buggy.sv:60.9-98.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$421",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:83.25-83.41|axi4lite_slave_buggy.sv:83.21-89.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$426",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:71.25-71.32|axi4lite_slave_buggy.sv:71.21-79.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$430",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:60.13-60.21|axi4lite_slave_buggy.sv:60.9-98.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$435",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:83.25-83.41|axi4lite_slave_buggy.sv:83.21-89.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$437",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:80.20-80.20|axi4lite_slave_buggy.sv:68.13-97.20"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$440",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:60.13-60.21|axi4lite_slave_buggy.sv:60.9-98.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$446",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:83.25-83.41|axi4lite_slave_buggy.sv:83.21-89.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$451",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:60.13-60.21|axi4lite_slave_buggy.sv:60.9-98.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$456",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:83.25-83.41|axi4lite_slave_buggy.sv:83.21-89.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$465",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:60.13-60.21|axi4lite_slave_buggy.sv:60.9-98.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$472",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:71.25-71.32|axi4lite_slave_buggy.sv:71.21-79.24"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$476",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:60.13-60.21|axi4lite_slave_buggy.sv:60.9-98.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$pmux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [4, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [2, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$298",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:120.20-120.20|axi4lite_slave_buggy.sv:110.13-133.20"
+                  },
+                  "parameters": {
+                    "S_WIDTH": "00000000000000000000000000000010",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$331",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:120.20-120.20|axi4lite_slave_buggy.sv:110.13-133.20"
+                  },
+                  "parameters": {
+                    "S_WIDTH": "00000000000000000000000000000010",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$338",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:120.20-120.20|axi4lite_slave_buggy.sv:110.13-133.20"
+                  },
+                  "parameters": {
+                    "S_WIDTH": "00000000000000000000000000000010",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$423",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:80.20-80.20|axi4lite_slave_buggy.sv:68.13-97.20"
+                  },
+                  "parameters": {
+                    "S_WIDTH": "00000000000000000000000000000010",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procmux$443",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:90.20-90.20|axi4lite_slave_buggy.sv:68.13-97.20"
+                  },
+                  "parameters": {
+                    "S_WIDTH": "00000000000000000000000000000010",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$458",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:80.20-80.20|axi4lite_slave_buggy.sv:68.13-97.20"
+                  },
+                  "parameters": {
+                    "S_WIDTH": "00000000000000000000000000000010",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$469",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:80.20-80.20|axi4lite_slave_buggy.sv:68.13-97.20"
+                  },
+                  "parameters": {
+                    "S_WIDTH": "00000000000000000000000000000010",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$572",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:101.5-135.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$573",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:101.5-135.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$574",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:101.5-135.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$575",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:101.5-135.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procdff$576",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:101.5-135.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$577",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:101.5-135.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procdff$578",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:59.5-99.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$579",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:59.5-99.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$580",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:59.5-99.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$581",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:59.5-99.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$582",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:59.5-99.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$583",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:59.5-99.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$343_CMP0",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:110.27-110.27|axi4lite_slave_buggy.sv:110.13-133.20"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$474_CMP0",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_slave_buggy.sv:68.27-68.27|axi4lite_slave_buggy.sv:68.13-97.20"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_and$axi4lite_slave_buggy.sv:127$252",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:127.34-127.50"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_slave_buggy.sv:83$244",
+                  "attributes": {
+                    "src": "axi4lite_slave_buggy.sv:83.25-83.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "dynports": "00000000000000000000000000000001",
+            "hdlname": "axi4lite_slave",
+            "src": "axi4lite_slave_buggy.sv:3.1-137.10"
+        }
+      },
+      {
+        "name": "axi4lite_fv_top",
+        "cell_sorts": [
+          {
+            "type": "$check",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "ARGS",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "TRG",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "_witness_.check_assume_axi4lite_fv_top_sv_40_215",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_axi4lite_fv_top_sv_40_215",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:40.13-40.29"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_axi4lite_fv_top_sv_51_41",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_axi4lite_fv_top_sv_51_41",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:51.13-51.28"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_axi4lite_fv_top_sv_56_58",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_axi4lite_fv_top_sv_56_58",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:56.17-56.32"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_axi4lite_fv_top_sv_57_59",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_axi4lite_fv_top_sv_57_59",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:57.17-57.48"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111110",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_axi4lite_fv_top_sv_60_63",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_axi4lite_fv_top_sv_60_63",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:60.17-60.31"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111101",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_axi4lite_fv_top_sv_61_64",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_axi4lite_fv_top_sv_61_64",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:61.17-61.46"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111100",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_axi4lite_fv_top_sv_62_66",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_axi4lite_fv_top_sv_62_66",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:62.17-62.46"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111011",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_axi4lite_fv_top_sv_65_70",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_axi4lite_fv_top_sv_65_70",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:65.17-65.32"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111010",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_axi4lite_fv_top_sv_66_71",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_axi4lite_fv_top_sv_66_71",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:66.17-66.48"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111001",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_axi4lite_fv_top_sv_71_75",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_axi4lite_fv_top_sv_71_75",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:71.9-71.25"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_axi4lite_fv_top_sv_71_77",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_axi4lite_fv_top_sv_71_77",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:71.27-71.42"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111110",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_axi4lite_fv_top_sv_71_79",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_axi4lite_fv_top_sv_71_79",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:71.44-71.60"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111101",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "a01",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:76.13-76.33"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a02",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:80.13-80.33"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a03",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:83.39-83.60"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a04",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:86.39-86.60"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a05",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:90.13-90.45"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a06",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:93.32-93.78"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a07",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:96.32-96.78"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a08",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:100.13-100.34"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a09",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:104.13-104.34"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a10",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:109.13-109.35"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a11",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:114.13-114.35"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a12",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:121.41-121.84"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a13",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:128.13-128.33"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a14",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:171.13-171.47"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a14_inv",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:166.13-166.62"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "a15",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:174.22-176.58"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "c_both_idle",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:182.13-182.83"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "cover",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111101",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "c_read_completes",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:181.13-181.56"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "cover",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111110",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "c_write_completes",
+                  "attributes": {
+                    "keep": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:180.13-180.56"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "cover",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$587",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:149.5-158.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procdff$588",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:149.5-158.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$589",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:136.5-145.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procdff$590",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:136.5-145.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$591",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:125.5-128.34"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$592",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:125.5-128.34"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$593",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:111.5-114.36"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$594",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:111.5-114.36"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$595",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:106.5-109.36"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$596",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:106.5-109.36"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$597",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:102.5-104.35"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$598",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:102.5-104.35"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$599",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:102.5-104.35"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$600",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:98.5-100.35"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$601",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:98.5-100.35"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$602",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:98.5-100.35"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$603",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:88.5-90.46"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$604",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:78.5-80.34"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$605",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:78.5-80.34"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$606",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:78.5-80.34"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$607",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:74.5-76.34"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$608",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:74.5-76.34"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$609",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:74.5-76.34"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$610",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:53.5-69.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$611",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:53.5-69.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$612",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:53.5-69.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$613",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:53.5-69.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procdff$614",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:53.5-69.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$615",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:53.5-69.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$616",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:53.5-69.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procdff$617",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:53.5-69.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000100"
+                  }
+                },
+                {
+                  "name": "$procdff$618",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:53.5-69.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$619",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:53.5-69.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$620",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:53.5-69.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procdff$621",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:49.5-51.29"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$622",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:46.5-46.49"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$623",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:43.5-43.49"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$ne",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$ne$axi4lite_fv_top.sv:121$162",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:121.54-121.73"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$paramod$69437980e42767c350af827a9fef437148ade08c\\axi4lite_slave",
+            "ports": [
+                {
+                  "name": "aclk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "araddr",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "aresetn",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "arready",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "arvalid",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "awaddr",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "awready",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "awvalid",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "bready",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "bresp",
+                  "direction": "",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "bvalid",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "fv_mem_at_watch",
+                  "direction": "",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "fv_r_state",
+                  "direction": "",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "fv_raddr_q",
+                  "direction": "",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "fv_w_state",
+                  "direction": "",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "fv_waddr_q",
+                  "direction": "",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "fv_watch_idx",
+                  "direction": "io",
+                  "range": [3, 0]
+                },
+                {
+                  "name": "rdata",
+                  "direction": "",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "rready",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "rresp",
+                  "direction": "",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "rvalid",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "wdata",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "wready",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "wstrb",
+                  "direction": "io",
+                  "range": [4, 0]
+                },
+                {
+                  "name": "wvalid",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "dut",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:28.72-38.6"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$reduce_bool",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$ne$axi4lite_fv_top.sv:108$146",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:108.13-108.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ne$axi4lite_fv_top.sv:108$148",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:108.36-108.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ne$axi4lite_fv_top.sv:113$156",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:113.13-113.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ne$axi4lite_fv_top.sv:113$158",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:113.36-113.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$486",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:169.13-170.56|axi4lite_fv_top.sv:169.9-171.48"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$488",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:165.13-165.37|axi4lite_fv_top.sv:165.9-166.63"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$490",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:153.22-154.65|axi4lite_fv_top.sv:153.18-157.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$493",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:150.13-150.21|axi4lite_fv_top.sv:150.9-157.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$495",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:153.22-154.65|axi4lite_fv_top.sv:153.18-157.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$498",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:150.13-150.21|axi4lite_fv_top.sv:150.9-157.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$500",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:140.22-141.65|axi4lite_fv_top.sv:140.18-144.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$503",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:137.13-137.21|axi4lite_fv_top.sv:137.9-144.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$505",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:140.22-141.65|axi4lite_fv_top.sv:140.18-144.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$508",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "axi4lite_fv_top.sv:137.13-137.21|axi4lite_fv_top.sv:137.9-144.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000100000"
+                  }
+                },
+                {
+                  "name": "$procmux$510",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:126.13-127.62|axi4lite_fv_top.sv:126.9-128.34"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$512",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:121.32-121.39|axi4lite_fv_top.sv:121.28-121.85"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$514",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:112.13-113.62|axi4lite_fv_top.sv:112.9-114.36"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$516",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:107.13-108.62|axi4lite_fv_top.sv:107.9-109.36"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$518",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:103.13-103.88|axi4lite_fv_top.sv:103.9-104.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$520",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:99.13-99.88|axi4lite_fv_top.sv:99.9-100.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$522",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:96.13-96.30|axi4lite_fv_top.sv:96.9-96.79"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$524",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:93.13-93.30|axi4lite_fv_top.sv:93.9-93.79"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$526",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:89.13-89.48|axi4lite_fv_top.sv:89.9-90.46"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$530",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:83.13-83.37|axi4lite_fv_top.sv:83.9-83.61"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$532",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:79.13-79.89|axi4lite_fv_top.sv:79.9-80.34"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$534",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:75.13-75.89|axi4lite_fv_top.sv:75.9-76.34"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$540",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:70.21-70.29|axi4lite_fv_top.sv:70.17-72.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$546",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:64.17-64.50|axi4lite_fv_top.sv:64.13-67.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$548",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:54.13-54.54|axi4lite_fv_top.sv:54.9-68.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$558",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:59.17-59.48|axi4lite_fv_top.sv:59.13-63.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$560",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:54.13-54.54|axi4lite_fv_top.sv:54.9-68.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$566",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:55.17-55.50|axi4lite_fv_top.sv:55.13-58.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$568",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:54.13-54.54|axi4lite_fv_top.sv:54.9-68.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$570",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:50.13-50.43|axi4lite_fv_top.sv:50.9-51.29"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_or$axi4lite_fv_top.sv:121$163",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:121.54-121.83"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$axi4lite_fv_top.sv:175$199",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:175.14-175.56"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$axi4lite_fv_top.sv:175$201",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:175.14-175.79"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$axi4lite_fv_top.sv:176$204",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:176.14-176.56"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$axi4lite_fv_top.sv:93$117",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:93.45-93.77"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$axi4lite_fv_top.sv:96$122",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:96.45-96.77"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:103$137",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:103.13-103.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:103$138",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:103.13-103.71"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:103$139",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:103.13-103.88"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:107$145",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:107.13-107.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:107$147",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:107.13-108.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:107$149",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:107.13-108.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:112$155",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:112.13-112.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:112$157",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:112.13-113.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:112$159",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:112.13-113.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:126$167",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:126.13-126.36"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:126$168",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:126.13-126.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:126$170",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:126.13-127.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:126$172",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:126.13-127.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:140$176",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:140.22-140.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:140$177",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:140.22-140.61"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:140$179",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:140.22-141.65"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:153$184",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:153.22-153.52"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:153$186",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:153.22-154.65"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:165$188",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:165.13-165.37"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:169$191",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:169.13-169.30"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:169$192",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:169.13-169.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:169$194",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:169.13-170.56"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:175$205",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:175.13-176.57"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:180$207",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:180.39-180.55"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:181$208",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:181.39-181.55"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:182$211",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:182.39-182.57"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:182$213",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:182.39-182.82"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:47$37",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:47.25-47.46"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:50$40",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:50.13-50.43"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:54$54",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:54.13-54.43"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:54$55",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:54.13-54.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:55$57",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:55.17-55.50"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:59$62",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:59.17-59.48"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:64$69",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:64.17-64.50"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:75$86",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:75.13-75.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:75$87",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:75.13-75.71"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:75$89",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:75.13-75.89"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:79$95",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:79.13-79.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:79$96",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:79.13-79.71"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:79$98",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:79.13-79.89"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:86$105",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:86.13-86.37"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:89$109",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:89.13-89.48"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:93$114",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:93.13-93.30"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:99$128",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:99.13-99.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:99$129",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:99.13-99.71"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$axi4lite_fv_top.sv:99$130",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:99.13-99.88"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:176$202",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:176.14-176.33"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:182$212",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:182.62-182.81"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:93$115",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:93.45-93.59"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:96$120",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:96.45-96.59"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:109$150",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:109.26-109.34"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:114$160",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:114.26-114.34"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:182$209",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:182.39-182.46"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:182$210",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:182.50-182.57"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:40$216",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:40.20-40.28"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:47$36",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:47.36-47.46"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:55$56",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:55.35-55.50"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:59$61",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:59.34-59.48"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:64$68",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:64.35-64.50"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:71$76",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:71.16-71.24"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:71$78",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:71.34-71.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:71$80",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:71.51-71.59"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:75$88",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:75.75-75.89"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$axi4lite_fv_top.sv:79$97",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:79.75-79.89"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:127$171",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:127.36-127.62"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:141$178",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:141.23-141.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000011",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:166$189",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:166.30-166.61"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:170$193",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:170.14-170.55"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000011",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:171$195",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:171.26-171.46"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:175$198",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:175.37-175.56"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:175$200",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:175.60-175.79"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:176$203",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:176.37-176.56"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:57$60",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:57.24-57.47"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000101",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:61$65",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:61.24-61.45"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:62$67",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:62.24-62.45"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000100",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000100",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:66$72",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:66.24-66.47"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000101",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:93$116",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:93.63-93.77"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$axi4lite_fv_top.sv:96$121",
+                  "attributes": {
+                    "src": "axi4lite_fv_top.sv:96.63-96.77"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$anyconst",
+            "ports": [
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [3, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$anyconst$33",
+                  "attributes": {
+                    "reg": "f_watch_idx",
+                    "src": "axi4lite_fv_top.sv:26.41-26.52"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000011"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "hdlname": "axi4lite_fv_top",
+            "dynports": "00000000000000000000000000000001",
+            "top": "00000000000000000000000000000001",
+            "src": "axi4lite_fv_top.sv:3.1-186.10"
+        }
+      }
+  ]
+}
