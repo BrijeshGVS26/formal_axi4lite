@@ -143,6 +143,3 @@ all.
 - Cover back-to-back transactions and interleaved read/write.
 - Try the same flow on a bigger AXI4 slave with bursts.
 
-## See also
-
-- `docs/bugs_found.md` -- step-by-step walkthrough of the injected bug
